@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_demo_starter/screen1.dart';
 
 class Screen2 extends StatelessWidget {
   @override
@@ -9,10 +10,14 @@ class Screen2 extends StatelessWidget {
         title: Text('Screen 2'),
       ),
       body: Center(
-        child: RaisedButton(
-          color: Colors.blue,
+        child: ElevatedButton(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(Colors.blue),
+          ),
           child: Text('Go Back To Screen 1'),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
       ),
     );
